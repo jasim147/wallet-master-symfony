@@ -18,3 +18,6 @@ Route::get('/categories', [\App\Http\Controllers\CategoryController::class, 'ind
 
 Route::get('/category/item', [\App\Http\Controllers\ItemController::class, 'create'])->name('item.create');
 Route::post('/category/item', [\App\Http\Controllers\ItemController::class, 'store'])->name('item.store');
+Route::get('/category/edit/{id}', [\App\Http\Controllers\CategoryController::class, 'category_edit'])->name('category.edit');
+Route::put('/category/update/{id}', [\App\Http\Controllers\CategoryController::class, 'category_editt'])->name('category.update');
+Route::delete('/category/delete/{id}', [\App\Http\Controllers\CategoryController::class, 'category_delete'])->name('category.delete');
